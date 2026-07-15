@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Usage guide
+    url: https://kprompt-website.vercel.app/#usage
+    about: Install, config, and first prompts
+  - name: Security vulnerability
+    url: https://github.com/kprompt/kprompt/security/advisories/new
+    about: Report a security issue privately (do not open a public issue)
+  - name: LLM providers
+    url: https://github.com/kprompt/kprompt/blob/main/docs/providers.md
+    about: API keys, providers, and local Ollama setup

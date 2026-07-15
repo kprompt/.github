@@ -1,0 +1,48 @@
+name: Feature request
+description: Suggest an improvement to kprompt
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem first — solutions second. v1 stays CLI-first (see project vision).
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do that is awkward or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should kprompt behave?
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example prompts / UX
+      description: Sample `kprompt "..."` lines or UI flow
+      placeholder: |
+        kprompt "wait for payment-api rollout"
+        kprompt "delete deployment foo" --approve
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Importance to you
+      options:
+        - Nice to have
+        - Important for my workflow
+        - Blocker without this
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues / roadmap discussion for duplicates
+          required: true
