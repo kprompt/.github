@@ -1,76 +1,111 @@
+<div align="center">
+
+<img src="./assets/banner.png" alt="kprompt — Talk to Your Cluster" width="100%" />
+
+<br />
+
+<img src="./assets/logo.png" alt="kprompt logo" width="96" />
+
 # kprompt
 
-**Talk to Your Cluster.**
+### 💬 Talk to Your Cluster.
 
-Open-source AI CLI to control Kubernetes with natural language. Describe what you want — deploy, scale, rollback, inspect, or explain — and kprompt turns it into a plan you can review before anything touches the cluster.
+Open-source AI CLI to control **Kubernetes** with natural language.  
+Describe what you want — deploy, scale, rollback, inspect, or explain — and kprompt turns it into a plan you can review before anything touches the cluster.
 
-```bash
-curl -fsSL https://kprompt-website.vercel.app/install | bash
-```
+[![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
+[![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
+[![Website](https://img.shields.io/badge/Website-Live-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white)](https://kprompt-website.vercel.app)
 
-## What you can say
-
-```bash
-kprompt "list deployments"
-kprompt "show pods" -n default
-kprompt "deploy redis"
-kprompt "deploy nginx" --approve
-kprompt "scale api to 10"
-kprompt "scale api to 10" --approve
-kprompt "rollback payment-api" --approve
-kprompt "explain why payment-api is crashing"
-```
-
-Reads run immediately. Mutations show a plan first, then ask `y/N` on a TTY — or pass `--approve` to apply without the prompt.
-
-## How it works
-
-**Prompt → Intent → Plan → Safety → Approval → Executor → Kubernetes**
-
-1. **Prompt** — describe the change in plain English  
-2. **Plan** — intent is parsed into concrete cluster actions  
-3. **Safety** — destructive prompts (wipe cluster, delete everything, …) are hard-denied  
-4. **Apply** — review, then execute against your live kubeconfig context  
-
-Same kubeconfig as `kubectl`. No separate agent or control plane to install.
-
-## What’s in v0.2
-
-| Capability | Status |
-|------------|--------|
-| Deploy (e.g. redis / nginx shortcuts) | Plan → safety → apply |
-| Scale | Plan → safety → apply |
-| Rollback | Plan → safety → apply |
-| Get / list (pods, deployments, services) | Read-only |
-| Explain-lite (status + events) | Read-only |
-| `kprompt config` show / set | Defaults in `~/.kprompt/config.yaml` |
-| Multi-LLM providers | OpenAI, Anthropic, Gemini, Groq, Ollama, and more |
-| Interactive approval | TTY `y/N`, or `--approve` |
-
-MIT licensed. Kind E2E coverage under `go test -tags=e2e`.
-
-## Quick start
-
-1. Install the CLI (binary into `~/.local/bin`):
+<br />
 
 ```bash
 curl -fsSL https://kprompt-website.vercel.app/install | bash
-# fallback: curl -fsSL https://cdn.jsdelivr.net/gh/kprompt/kprompt@v0.2.0/install/install.sh | bash
 ```
 
-2. Point kubeconfig at a cluster (`~/.kube/config` or `KUBECONFIG`).
+[🌐 Website](https://kprompt-website.vercel.app) · [📦 CLI](https://github.com/kprompt/kprompt) · [🚀 Releases](https://github.com/kprompt/kprompt/releases) · [📖 Usage](https://kprompt-website.vercel.app/#usage)
 
-3. Set an LLM API key:
+</div>
+
+---
+
+## ✨ What you can say
 
 ```bash
-export KPROMPT_OPENAI_API_KEY=sk-...          # --provider openai (default)
-export KPROMPT_ANTHROPIC_API_KEY=sk-ant-...   # --provider anthropic
-export KPROMPT_GEMINI_API_KEY=...             # --provider gemini
-export KPROMPT_GROQ_API_KEY=...               # --provider groq
-# local: kprompt --provider ollama --model llama3.2 "..."
+kprompt "list deployments"                    # 👀 inspect
+kprompt "show pods" -n default                # 📋 read-only
+kprompt "deploy redis"                        # 🧩 plan first
+kprompt "deploy nginx" --approve              # ✅ apply
+kprompt "scale api to 10"                     # 📈 plan
+kprompt "scale api to 10" --approve           # ⚡ apply
+kprompt "rollback payment-api" --approve      # ⏪ undo
+kprompt "explain why payment-api is crashing" # 🔍 debug
 ```
 
-4. Optional defaults (no secrets written to disk):
+> 💡 **Reads** run immediately. **Mutations** show a plan first, then ask `y/N` on a TTY — or pass `--approve`.
+
+---
+
+## ⚙️ How it works
+
+```text
+🗣️ Prompt  →  🧠 Intent  →  📝 Plan  →  🛡️ Safety  →  ✅ Approval  →  ⚙️ Executor  →  ⎈ Kubernetes
+```
+
+| Step | What happens |
+|------|----------------|
+| 1️⃣ **Prompt** | Describe the change in plain English |
+| 2️⃣ **Plan** | Intent is parsed into concrete cluster actions |
+| 3️⃣ **Safety** | Wipe / delete-everything style prompts are **hard-denied** |
+| 4️⃣ **Apply** | Review, then execute against your live kubeconfig |
+
+Same kubeconfig as `kubectl`. No separate agent or control plane to install. 🎯
+
+---
+
+## 🚀 What’s in v0.2
+
+| | Capability | Status |
+|---|------------|--------|
+| 🧩 | Deploy (redis / nginx shortcuts) | Plan → safety → apply |
+| 📈 | Scale | Plan → safety → apply |
+| ⏪ | Rollback | Plan → safety → apply |
+| 👀 | Get / list (pods, deployments, services) | Read-only |
+| 🔍 | Explain-lite (status + events) | Read-only |
+| ⚙️ | `kprompt config` show / set | `~/.kprompt/config.yaml` |
+| 🤖 | Multi-LLM providers | OpenAI, Anthropic, Gemini, Groq, Ollama… |
+| ✅ | Interactive approval | TTY `y/N`, or `--approve` |
+
+MIT licensed · Kind E2E under `go test -tags=e2e`
+
+---
+
+## 🏁 Quick start
+
+### 1️⃣ Install
+
+```bash
+curl -fsSL https://kprompt-website.vercel.app/install | bash
+# fallback 🛟
+curl -fsSL https://cdn.jsdelivr.net/gh/kprompt/kprompt@v0.2.0/install/install.sh | bash
+```
+
+### 2️⃣ Connect your cluster ☸️
+
+Point kubeconfig at a cluster (`~/.kube/config` or `KUBECONFIG`).
+
+### 3️⃣ Set an LLM API key 🔑
+
+```bash
+export KPROMPT_OPENAI_API_KEY=sk-...          # openai (default)
+export KPROMPT_ANTHROPIC_API_KEY=sk-ant-...   # anthropic
+export KPROMPT_GEMINI_API_KEY=...             # gemini
+export KPROMPT_GROQ_API_KEY=...               # groq
+# local 🦙: kprompt --provider ollama --model llama3.2 "..."
+```
+
+### 4️⃣ Optional defaults 💾
 
 ```bash
 kprompt config set provider gemini
@@ -79,33 +114,47 @@ kprompt config set namespace default
 kprompt config
 ```
 
-5. Run a prompt:
+> 🔐 API keys stay in your environment — never written to `config.yaml`.
+
+### 5️⃣ Run a prompt 🎉
 
 ```bash
 kprompt "list deployments"
 kprompt "deploy redis"
 ```
 
-## Why kprompt
+---
 
-| Traditional Kubernetes | With kprompt |
-|------------------------|--------------|
-| Write YAML and remember kubectl flags | Describe what you want |
-| Copy manifests and hunt docs | AI plans the change |
+## 💡 Why kprompt
+
+| ❌ Traditional Kubernetes | ✅ With kprompt |
+|---------------------------|-----------------|
+| Write YAML & memorize kubectl flags | Describe what you want |
+| Copy manifests & hunt docs | AI plans the change |
 | Manual debugging loops | Explain from live status + events |
 | Apply first, hope later | Review plan, then approve |
 
-## Repositories
+---
 
-| Repo | Role |
-|------|------|
-| [**kprompt**](https://github.com/kprompt/kprompt) | CLI product — Go, MIT |
-| [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Product site + `/install` endpoint |
+## 📚 Repositories
 
-## Links
+| | Repo | Role |
+|---|------|------|
+| 🖥️ | [**kprompt**](https://github.com/kprompt/kprompt) | CLI product — Go, MIT |
+| 🌐 | [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Product site + `/install` endpoint |
 
-- Website & usage guide: [kprompt-website.vercel.app](https://kprompt-website.vercel.app)
-- CLI docs: [github.com/kprompt/kprompt](https://github.com/kprompt/kprompt)
-- Providers: [docs/providers.md](https://github.com/kprompt/kprompt/blob/main/docs/providers.md)
-- Latest release: [v0.2.0](https://github.com/kprompt/kprompt/releases/tag/v0.2.0)
-- Issues & contributions welcome on the [CLI repo](https://github.com/kprompt/kprompt/issues)
+<p align="center">
+  <img src="./assets/og.png" alt="kprompt logo mark" width="160" />
+</p>
+
+---
+
+<div align="center">
+
+### 🔗 Links
+
+[Website](https://kprompt-website.vercel.app) · [CLI docs](https://github.com/kprompt/kprompt) · [Providers](https://github.com/kprompt/kprompt/blob/main/docs/providers.md) · [v0.2.0](https://github.com/kprompt/kprompt/releases/tag/v0.2.0) · [Issues](https://github.com/kprompt/kprompt/issues)
+
+**⭐ Star the CLI · 🛠️ PRs welcome · 💬 Talk to Your Cluster.**
+
+</div>
