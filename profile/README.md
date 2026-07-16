@@ -16,15 +16,15 @@ Describe what you want — deploy, scale, rollback, inspect, or explain — and 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
-[![Website](https://img.shields.io/badge/Website-Live-0ea5e9?style=for-the-badge&logo=vercel&logoColor=white)](https://kprompt-website.vercel.app)
+[![Website](https://img.shields.io/badge/Website-kprompt.ai-0ea5e9?style=for-the-badge)](https://kprompt.ai)
 
 <br />
 
 ```bash
-curl -fsSL https://kprompt-website.vercel.app/install | bash
+curl -fsSL https://kprompt.ai/install | bash
 ```
 
-[🌐 Website](https://kprompt-website.vercel.app) · [📦 CLI](https://github.com/kprompt/kprompt) · [🚀 Releases](https://github.com/kprompt/kprompt/releases) · [📖 Usage](https://kprompt-website.vercel.app/#usage)
+[🌐 Website](https://kprompt.ai) · [📦 CLI](https://github.com/kprompt/kprompt) · [🚀 Releases](https://github.com/kprompt/kprompt/releases) · [📖 Usage](https://kprompt.ai/#usage)
 
 </div>
 
@@ -86,7 +86,7 @@ MIT licensed · Kind E2E under `go test -tags=e2e`
 ### 1️⃣ Install
 
 ```bash
-curl -fsSL https://kprompt-website.vercel.app/install | bash
+curl -fsSL https://kprompt.ai/install | bash
 # fallback 🛟
 curl -fsSL https://cdn.jsdelivr.net/gh/kprompt/kprompt@v0.2.0/install/install.sh | bash
 ```
@@ -153,7 +153,7 @@ kprompt "deploy redis"
 
 ### 🔗 Links
 
-[Website](https://kprompt-website.vercel.app) · [CLI docs](https://github.com/kprompt/kprompt) · [Providers](https://github.com/kprompt/kprompt/blob/main/docs/providers.md) · [v0.2.0](https://github.com/kprompt/kprompt/releases/tag/v0.2.0) · [Issues](https://github.com/kprompt/kprompt/issues)
+[Website](https://kprompt.ai) · [CLI docs](https://github.com/kprompt/kprompt) · [Providers](https://github.com/kprompt/kprompt/blob/main/docs/providers.md) · [v0.2.0](https://github.com/kprompt/kprompt/releases/tag/v0.2.0) · [Issues](https://github.com/kprompt/kprompt/issues)
 
 **⭐ Star the CLI · 🛠️ PRs welcome · 💬 Talk to Your Cluster.**
 

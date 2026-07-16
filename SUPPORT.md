@@ -2,7 +2,7 @@
 
 ## Docs & usage
 
-- Website + usage guide: https://kprompt-website.vercel.app/#usage
+- Website + usage guide: https://kprompt.ai/#usage
 - CLI README: https://github.com/kprompt/kprompt
 - LLM providers: https://github.com/kprompt/kprompt/blob/main/docs/providers.md
 - Releases / install: https://github.com/kprompt/kprompt/releases

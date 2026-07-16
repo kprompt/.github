@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: Usage guide
-    url: https://kprompt-website.vercel.app/#usage
+    url: https://kprompt.ai/#usage
     about: Install, config, and first prompts
   - name: Security vulnerability
     url: https://github.com/kprompt/kprompt/security/advisories/new
