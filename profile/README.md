@@ -14,7 +14,7 @@ Open-source AI CLI to control **Kubernetes** with natural language.
 Describe what you want — deploy, scale, rollback, inspect, or explain — and kprompt turns it into a plan you can review before anything touches the cluster.
 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
 [![Website](https://img.shields.io/badge/Website-kprompt.ai-0ea5e9?style=for-the-badge)](https://kprompt.ai)
 
@@ -77,7 +77,7 @@ Same kubeconfig as `kubectl`. No separate agent or control plane to install. �
 | 🤖 | Multi-LLM providers | OpenAI, Anthropic, Gemini, Groq, Ollama… |
 | ✅ | Interactive approval | TTY `y/N`, or `--approve` |
 
-MIT licensed · Kind E2E under `go test -tags=e2e`
+Apache-2.0 licensed · Kind E2E under `go test -tags=e2e`
 
 ---
 
@@ -140,7 +140,7 @@ kprompt "deploy redis"
 
 | | Repo | Role |
 |---|------|------|
-| 🖥️ | [**kprompt**](https://github.com/kprompt/kprompt) | CLI product — Go, MIT |
+| 🖥️ | [**kprompt**](https://github.com/kprompt/kprompt) | CLI product — Go, Apache-2.0 |
 | 🌐 | [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Product site + `/install` endpoint |
 
 <p align="center">

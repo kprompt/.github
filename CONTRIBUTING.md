@@ -49,3 +49,7 @@ Do not report vulnerabilities in public issues. See [SECURITY.md](./SECURITY.md)
 ## Code of Conduct
 
 Participation is governed by our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## License
+
+Contributions are accepted under the [Apache License 2.0](https://github.com/kprompt/kprompt/blob/main/LICENSE).
