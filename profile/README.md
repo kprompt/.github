@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./assets/banner.png" alt="kprompt — Talk to Your Cluster" width="100%" />
+<img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/banner.png" alt="kprompt — Talk to Your Cluster" width="100%" />
 
 <br />
 
-<img src="./assets/logo.png" alt="kprompt logo" width="96" />
+<img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/logo.png" alt="kprompt logo" width="96" />
 
 # kprompt
 
@@ -144,7 +144,7 @@ kprompt "deploy redis"
 | 🌐 | [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Product site + `/install` endpoint |
 
 <p align="center">
-  <img src="./assets/og.png" alt="kprompt logo mark" width="160" />
+  <img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/og.png" alt="kprompt logo mark" width="160" />
 </p>
 
 ---
