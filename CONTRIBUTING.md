@@ -6,15 +6,24 @@ Thanks for helping make **Talk to Your Cluster** better.
 
 | Area | Repo |
 |------|------|
-| CLI (Go) | [`kprompt/kprompt`](https://github.com/kprompt/kprompt) |
-| Website / install endpoint | [`kprompt/kprompt-website`](https://github.com/kprompt/kprompt-website) |
-| Org profile & defaults | [`kprompt/.github`](https://github.com/kprompt/.github) |
+| CLI + Observe agent (Go) | [`kprompt/kprompt`](https://github.com/kprompt/kprompt) — start with [CONTRIBUTING.md](https://github.com/kprompt/kprompt/blob/main/CONTRIBUTING.md) |
+| Kind demos | [`kprompt/kprompt-examples`](https://github.com/kprompt/kprompt-examples) |
+| Website / install | [`kprompt/kprompt-website`](https://github.com/kprompt/kprompt-website) |
+| Org profile & defaults | this repo — [`kprompt/.github`](https://github.com/kprompt/.github) |
+| Homebrew | [`kprompt/homebrew-tap`](https://github.com/kprompt/homebrew-tap) |
 
-Architecture planning is private; product discussions belong on public issues.
+## First contribution path
+
+1. Open [`good first issue`](https://github.com/kprompt/kprompt/labels/good%20first%20issue) on the CLI repo.
+2. Comment `I'd like to take this`.
+3. Follow the CLI [CONTRIBUTING.md](https://github.com/kprompt/kprompt/blob/main/CONTRIBUTING.md) checks.
+4. Ship a small focused PR.
+
+Questions / demos: [Discussions](https://github.com/kprompt/kprompt/discussions).
 
 ## Before you start
 
-1. Search [existing issues](https://github.com/kprompt/kprompt/issues) for duplicates.
+1. Search existing issues for duplicates.
 2. For bugs / features, open an issue with the templates (or discuss first for large changes).
 3. Keep PRs focused — one concern per PR.
 
@@ -44,11 +53,11 @@ go test -tags=e2e ./test/e2e/
 
 ## Security
 
-Do not report vulnerabilities in public issues. See [SECURITY.md](./SECURITY.md).
+Do not report vulnerabilities in public issues. See [SECURITY.md](./SECURITY.md) if present.
 
 ## Code of Conduct
 
-Participation is governed by our [Code of Conduct](./CODE_OF_CONDUCT.md).
+Participation is governed by our [Code of Conduct](./CODE_OF_CONDUCT.md) when present. Be respectful either way.
 
 ## License
 

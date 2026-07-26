@@ -8,153 +8,101 @@
 
 # kprompt
 
-### 💬 Talk to Your Cluster.
+### Talk to Your Cluster.
 
-Open-source AI CLI to control **Kubernetes** with natural language.  
-Describe what you want — deploy, scale, rollback, inspect, or explain — and kprompt turns it into a plan you can review before anything touches the cluster.
+Open-source **AI Kubernetes CLI**: natural language compiles into a **reviewable plan**, then you approve before anything touches the cluster.
 
-[![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases)
+[![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases/latest)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
-[![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
+[![Go](https://img.shields.io/badge/Go-1.23+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
 [![Website](https://img.shields.io/badge/Website-kprompt.ai-0ea5e9?style=for-the-badge)](https://kprompt.ai)
 
 <br />
 
+**Start here → [`github.com/kprompt/kprompt`](https://github.com/kprompt/kprompt)** · star · clone · try the demo
+
 ```bash
 curl -fsSL https://kprompt.ai/install | bash
+# or: brew install kprompt/tap/kprompt
 ```
 
-[🌐 Website](https://kprompt.ai) · [📦 CLI](https://github.com/kprompt/kprompt) · [🚀 Releases](https://github.com/kprompt/kprompt/releases) · [📖 Usage](https://kprompt.ai/#usage)
+[Website](https://kprompt.ai) · [Docs](https://kprompt.ai/docs) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Examples](https://github.com/kprompt/kprompt-examples)
 
 </div>
 
 ---
 
-## ✨ What you can say
+## Observe agent demo (no API key)
+
+Kind cluster, seven broken workloads, heuristic Observe agent — **zero LLM spend**, Autopilot **propose-only**:
+
+<img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/kprompt-observe-demo.gif" alt="kprompt Observe agent on a broken kind cluster — incidents, health score, propose-only Autopilot" width="100%" />
 
 ```bash
-kprompt "list deployments"                    # 👀 inspect
-kprompt "show pods" -n default                # 📋 read-only
-kprompt "deploy redis"                        # 🧩 plan first
-kprompt "deploy nginx" --approve              # ✅ apply
-kprompt "scale api to 10"                     # 📈 plan
-kprompt "scale api to 10" --approve           # ⚡ apply
-kprompt "rollback payment-api" --approve      # ⏪ undo
-kprompt "explain why payment-api is crashing" # 🔍 debug
+git clone https://github.com/kprompt/kprompt-examples.git
+cd kprompt-examples && make walkthrough
 ```
-
-> 💡 **Reads** run immediately. **Mutations** show a plan first, then ask `y/N` on a TTY — or pass `--approve`.
 
 ---
 
-## ⚙️ How it works
+## What you can say
+
+```bash
+kprompt "scale api to 10"                     # plan first
+kprompt "scale api to 10" --approve --wait    # apply after review
+kprompt "explain why payment-api is crashing" # debug
+kprompt "delete everything in the cluster"    # hard-denied
+kprompt agent run -n payments --health --heuristic
+```
+
+Reads run immediately. Mutations show **Intent / Plan / Risk / Actions / Blast radius**, then ask `y/N` — or pass `--approve`.
+
+---
+
+## How it works
 
 ```text
-🗣️ Prompt  →  🧠 Intent  →  📝 Plan  →  🛡️ Safety  →  ✅ Approval  →  ⚙️ Executor  →  ⎈ Kubernetes
+Prompt → Intent → Plan → Safety → Approval → Executor → Kubernetes
 ```
 
 | Step | What happens |
 |------|----------------|
-| 1️⃣ **Prompt** | Describe the change in plain English |
-| 2️⃣ **Plan** | Intent is parsed into concrete cluster actions |
-| 3️⃣ **Safety** | Wipe / delete-everything style prompts are **hard-denied** |
-| 4️⃣ **Apply** | Review, then execute against your live kubeconfig |
+| **Prompt** | Describe the change in plain English |
+| **Plan** | Typed actions, risk, blast radius |
+| **Safety** | Wipe / delete-everything style prompts are hard-denied |
+| **Apply** | Review, then execute against your local kubeconfig |
 
-Same kubeconfig as `kubectl`. No separate agent or control plane to install. 🎯
-
----
-
-## 🚀 What’s in v0.2
-
-| | Capability | Status |
-|---|------------|--------|
-| 🧩 | Deploy (redis / nginx shortcuts) | Plan → safety → apply |
-| 📈 | Scale | Plan → safety → apply |
-| ⏪ | Rollback | Plan → safety → apply |
-| 👀 | Get / list (pods, deployments, services) | Read-only |
-| 🔍 | Explain-lite (status + events) | Read-only |
-| ⚙️ | `kprompt config` show / set | `~/.kprompt/config.yaml` |
-| 🤖 | Multi-LLM providers | OpenAI, Anthropic, Gemini, Groq, Ollama… |
-| ✅ | Interactive approval | TTY `y/N`, or `--approve` |
-
-Apache-2.0 licensed · Kind E2E under `go test -tags=e2e`
+Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local.
 
 ---
 
-## 🏁 Quick start
+## What's in v0.5
 
-### 1️⃣ Install
-
-```bash
-curl -fsSL https://kprompt.ai/install | bash
-# fallback 🛟
-curl -fsSL https://cdn.jsdelivr.net/gh/kprompt/kprompt@v0.2.0/install/install.sh | bash
-```
-
-### 2️⃣ Connect your cluster ☸️
-
-Point kubeconfig at a cluster (`~/.kube/config` or `KUBECONFIG`).
-
-### 3️⃣ Set an LLM API key 🔑
-
-```bash
-export KPROMPT_OPENAI_API_KEY=sk-...          # openai (default)
-export KPROMPT_ANTHROPIC_API_KEY=sk-ant-...   # anthropic
-export KPROMPT_GEMINI_API_KEY=...             # gemini
-export KPROMPT_GROQ_API_KEY=...               # groq
-# local 🦙: kprompt --provider ollama --model llama3.2 "..."
-```
-
-### 4️⃣ Optional defaults 💾
-
-```bash
-kprompt config set provider gemini
-kprompt config set model gemini-2.0-flash
-kprompt config set namespace default
-kprompt config
-```
-
-> 🔐 API keys stay in your environment — never written to `config.yaml`.
-
-### 5️⃣ Run a prompt 🎉
-
-```bash
-kprompt "list deployments"
-kprompt "deploy redis"
-```
+| | Capability |
+|---|------------|
+| Plan → approve → apply CLI | Scale, deploy, rollback, Helm, explain, investigate |
+| Observe agent | Namespace watch → Incident → gated Slack/webhook |
+| Autopilot | **Propose-only** by default (never silent apply) |
+| CI | `--output json` PlanResult for jq gates |
+| Multi-context | Read fan-out + per-context mutate approval |
 
 ---
 
-## 💡 Why kprompt
+## Repositories
 
-| ❌ Traditional Kubernetes | ✅ With kprompt |
-|---------------------------|-----------------|
-| Write YAML & memorize kubectl flags | Describe what you want |
-| Copy manifests & hunt docs | AI plans the change |
-| Manual debugging loops | Explain from live status + events |
-| Apply first, hope later | Review plan, then approve |
-
----
-
-## 📚 Repositories
-
-| | Repo | Role |
-|---|------|------|
-| 🖥️ | [**kprompt**](https://github.com/kprompt/kprompt) | CLI product — Go, Apache-2.0 |
-| 🌐 | [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Product site + `/install` endpoint |
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/og.png" alt="kprompt logo mark" width="160" />
-</p>
+| Repo | Role |
+|------|------|
+| [**kprompt**](https://github.com/kprompt/kprompt) | CLI + Observe agent (start here) |
+| [**kprompt-examples**](https://github.com/kprompt/kprompt-examples) | Kind demos — `make walkthrough` |
+| [**kprompt-website**](https://github.com/kprompt/kprompt-website) | Site + `/install` |
+| [**homebrew-tap**](https://github.com/kprompt/homebrew-tap) | `brew install kprompt/tap/kprompt` |
 
 ---
 
 <div align="center">
 
-### 🔗 Links
+[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.5.0](https://github.com/kprompt/kprompt/releases/tag/v0.5.0)
 
-[Website](https://kprompt.ai) · [CLI docs](https://github.com/kprompt/kprompt) · [Providers](https://github.com/kprompt/kprompt/blob/main/docs/providers.md) · [v0.2.0](https://github.com/kprompt/kprompt/releases/tag/v0.2.0) · [Issues](https://github.com/kprompt/kprompt/issues)
-
-**⭐ Star the CLI · 🛠️ PRs welcome · 💬 Talk to Your Cluster.**
+**Star the CLI · PRs welcome · Talk to Your Cluster.**
 
 </div>
