@@ -18,6 +18,7 @@
 
 - X: [https://x.com/kpromptai](https://x.com/kpromptai)
 - LinkedIn: [https://www.linkedin.com/company/kprompt](https://www.linkedin.com/company/kprompt)
+- Bluesky: [https://bsky.app/profile/kprompt.bsky.social](https://bsky.app/profile/kprompt.bsky.social)
 
 ## Security
 
