@@ -28,6 +28,8 @@ curl -fsSL https://kprompt.ai/install | bash
 
 [Website](https://kprompt.ai) · [Docs](https://kprompt.ai/docs) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Examples](https://github.com/kprompt/kprompt-examples)
 
+[X](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
+
 </div>
 
 ---
@@ -102,6 +104,8 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local.
 <div align="center">
 
 [Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.5.0](https://github.com/kprompt/kprompt/releases/tag/v0.5.0)
+
+[X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
 **Star the CLI · PRs welcome · Talk to Your Cluster.**
 

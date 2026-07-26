@@ -12,6 +12,12 @@
 1. Check the usage guide and README first.
 2. Open a [bug report](https://github.com/kprompt/kprompt/issues/new?template=bug_report.yml) or [feature request](https://github.com/kprompt/kprompt/issues/new?template=feature_request.yml) on the CLI repo.
 3. For install / website issues, use the same issue flow and mention the website host.
+4. Product contact: [hello@kprompt.ai](mailto:hello@kprompt.ai)
+
+## Social
+
+- X: [https://x.com/kpromptai](https://x.com/kpromptai)
+- LinkedIn: [https://www.linkedin.com/company/kprompt](https://www.linkedin.com/company/kprompt)
 
 ## Security
 
@@ -19,4 +25,4 @@ See [SECURITY.md](./SECURITY.md) — do not file public issues for vulnerabiliti
 
 ## What we don’t offer yet
 
-There is no dedicated Slack/Discord or paid support channel. GitHub issues are the primary support path.
+There is no dedicated Slack/Discord or paid support channel. GitHub issues and Discussions are the primary support path.

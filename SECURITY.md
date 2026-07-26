@@ -10,6 +10,8 @@ Security fixes are applied to the **latest release** of [`kprompt/kprompt`](http
 
 Please use [GitHub Private Vulnerability Reporting](https://github.com/kprompt/kprompt/security/advisories/new) on the CLI repository.
 
+You can also email [security@kprompt.ai](mailto:security@kprompt.ai) if private reporting is unavailable.
+
 Include:
 
 - Affected version (`kprompt version`) and install method
