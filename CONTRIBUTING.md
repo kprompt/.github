@@ -1,6 +1,6 @@
 # Contributing to kprompt
 
-Thanks for helping make **Talk to Your Cluster** better.
+Thanks for helping make **The AI Runtime for Kubernetes** better.
 
 ## Where to contribute
 

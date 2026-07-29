@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/banner.png" alt="kprompt — Talk to Your Cluster" width="100%" />
+<img src="https://raw.githubusercontent.com/kprompt/.github/main/profile/assets/banner.png" alt="kprompt — The AI Runtime for Kubernetes" width="100%" />
 
 <br />
 
@@ -8,9 +8,9 @@
 
 # kprompt
 
-### Talk to Your Cluster.
+### The AI Runtime for Kubernetes
 
-Open-source **AI Kubernetes CLI**: natural language compiles into a **reviewable plan**, then you approve before anything touches the cluster.
+Open-source reasoning layer for Kubernetes: observe the cluster, plan safe actions, and execute only after approval. Laptop CLI + optional in-cluster Observe agent.
 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases/latest)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
@@ -64,21 +64,21 @@ Reads run immediately. Mutations show **Intent / Plan / Risk / Actions / Blast r
 ## How it works
 
 ```text
-Prompt → Intent → Plan → Safety → Approval → Executor → Kubernetes
+Observe → Reason → Plan → Validate → Approve → Execute → Learn
 ```
 
 | Step | What happens |
 |------|----------------|
-| **Prompt** | Describe the change in plain English |
+| **Intent** | Describe the change in plain English — or let Observe watch continuously |
 | **Plan** | Typed actions, risk, blast radius |
 | **Safety** | Wipe / delete-everything style prompts are hard-denied |
 | **Apply** | Review, then execute against your local kubeconfig |
 
-Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local.
+Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent auto-heal by default.
 
 ---
 
-## What's in v0.5
+## What's in v0.7
 
 | | Capability |
 |---|------------|
@@ -103,10 +103,10 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local.
 
 <div align="center">
 
-[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.5.0](https://github.com/kprompt/kprompt/releases/tag/v0.5.0)
+[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.7.0](https://github.com/kprompt/kprompt/releases/tag/v0.7.0)
 
 [X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
-**Star the CLI · PRs welcome · Talk to Your Cluster.**
+**Star the CLI · PRs welcome · The AI Runtime for Kubernetes.**
 
 </div>
