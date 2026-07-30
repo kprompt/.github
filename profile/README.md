@@ -13,6 +13,7 @@
 Open-source reasoning layer for Kubernetes: observe the cluster, plan safe actions, and execute only after approval. Laptop CLI + optional in-cluster Observe agent.
 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/kprompt/kprompt/total?style=for-the-badge&logo=github)](https://github.com/kprompt/kprompt/releases)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-22c55e?style=for-the-badge)](https://github.com/kprompt/kprompt/blob/main/LICENSE)
 [![Go](https://img.shields.io/badge/Go-1.23+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/kprompt/kprompt)
 [![Website](https://img.shields.io/badge/Website-kprompt.ai-0ea5e9?style=for-the-badge)](https://kprompt.ai)
