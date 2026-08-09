@@ -29,7 +29,7 @@ curl -fsSL https://kprompt.ai/install | bash
 
 [Website](https://kprompt.ai) · [Docs](https://kprompt.ai/docs) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Examples](https://github.com/kprompt/kprompt-examples)
 
-[X](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
+[X](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [YouTube](https://www.youtube.com/@kprompt-ai) · [Instagram](https://www.instagram.com/kprompt.ai) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
 </div>
 
@@ -118,7 +118,7 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 [Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.10.0](https://github.com/kprompt/kprompt/releases/tag/v0.10.0)
 
-[X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
+[X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [YouTube](https://www.youtube.com/@kprompt-ai) · [Instagram](https://www.instagram.com/kprompt.ai) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
 **Star the CLI · PRs welcome · The AI Runtime for Kubernetes.**
 

@@ -18,6 +18,8 @@
 
 - X: [https://x.com/kpromptai](https://x.com/kpromptai)
 - LinkedIn: [https://www.linkedin.com/company/kprompt](https://www.linkedin.com/company/kprompt)
+- YouTube: [https://www.youtube.com/@kprompt-ai](https://www.youtube.com/@kprompt-ai)
+- Instagram: [https://www.instagram.com/kprompt.ai](https://www.instagram.com/kprompt.ai)
 - Bluesky: [https://bsky.app/profile/kprompt.bsky.social](https://bsky.app/profile/kprompt.bsky.social)
 
 ## Security
