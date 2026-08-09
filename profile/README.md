@@ -10,7 +10,7 @@
 
 ### The AI Runtime for Kubernetes
 
-Open-source reasoning layer for Kubernetes: observe the cluster, plan safe actions, and execute only after approval. Laptop CLI + optional in-cluster Observe agent.
+Open-source reasoning layer for Kubernetes: observe the cluster, plan safe actions, and execute only after approval. Laptop CLI + optional in-cluster Observe agent. **Free forever**, bring-your-own-key.
 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/kprompt/kprompt/total?style=for-the-badge&logo=github)](https://github.com/kprompt/kprompt/releases)
@@ -32,6 +32,16 @@ curl -fsSL https://kprompt.ai/install | bash
 [X](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
 </div>
+
+---
+
+## Highlights
+
+- 🧠 **Natural language → typed plan** — actions, diff, risk, and blast radius, not a raw `kubectl` guess.
+- 🛡️ **Plan before apply** — mutations stop for review; wipe-class intents are hard-denied.
+- 🔌 **Your LLM, your keys** — local Ollama (`$0`) or BYOK across 13 providers. Free forever.
+- 🔎 **AI SRE built in** — `investigate`, `why`, `timeline`, and `impact` for real root-cause analysis.
+- 👀 **Observe agent** — in-cluster watch → Incident → gated notify; propose-only, never a silent mutate.
 
 ---
 
@@ -79,14 +89,16 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 ---
 
-## What's in v0.7
+## What's in v0.10
 
 | | Capability |
 |---|------------|
 | Plan → approve → apply CLI | Scale, deploy, rollback, Helm, explain, investigate |
-| Observe agent | Namespace watch → Incident → gated Slack/webhook |
+| AI SRE | `investigate` · `why` · `timeline` · `impact` root-cause analysis |
+| Observe agent | Namespace watch → Incident → gated Slack / Discord / webhook |
+| Closed Learn loop | Apply + verify outcomes feed the incident patterns store — in-cluster |
 | Autopilot | **Propose-only** by default (never silent apply) |
-| CI | `--output json` PlanResult for jq gates |
+| CI & GitOps | `--output json` PlanResult for jq gates; `--gitops` opens a PR |
 | Multi-context | Read fan-out + per-context mutate approval |
 
 ---
@@ -104,7 +116,7 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 <div align="center">
 
-[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.7.0](https://github.com/kprompt/kprompt/releases/tag/v0.7.0)
+[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.10.0](https://github.com/kprompt/kprompt/releases/tag/v0.10.0)
 
 [X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
