@@ -39,7 +39,7 @@ curl -fsSL https://kprompt.ai/install | bash
 
 - 🧠 **Natural language → typed plan** — actions, diff, risk, and blast radius, not a raw `kubectl` guess.
 - 🛡️ **Plan before apply** — mutations stop for review; wipe-class intents are hard-denied.
-- 🔌 **Your LLM, your keys** — local Ollama (`$0`) or BYOK across 13 providers. Free forever.
+- 🔌 **Your LLM, your keys** — local Ollama (`$0`) or BYOK across 14 providers. Free forever.
 - 🔎 **AI SRE built in** — `investigate`, `why`, `timeline`, and `impact` for real root-cause analysis.
 - 👀 **Observe agent** — in-cluster watch → Incident → gated notify; propose-only, never a silent mutate.
 
@@ -89,12 +89,13 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 ---
 
-## What's in v0.10
+## What's in v0.11
 
 | | Capability |
 |---|------------|
 | Plan → approve → apply CLI | Scale, deploy, rollback, Helm, explain, investigate |
 | AI SRE | `investigate` · `why` · `timeline` · `impact` root-cause analysis |
+| MCP (IDE) | `kprompt mcp serve` — read/plan-only tools; mutations return a PlanResult |
 | Observe agent | Namespace watch → Incident → gated Slack / Discord / webhook |
 | Closed Learn loop | Apply + verify outcomes feed the incident patterns store — in-cluster |
 | Autopilot | **Propose-only** by default (never silent apply) |
@@ -116,7 +117,7 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 <div align="center">
 
-[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.10.0](https://github.com/kprompt/kprompt/releases/tag/v0.10.0)
+[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.11.0](https://github.com/kprompt/kprompt/releases/tag/v0.11.0)
 
 [X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [YouTube](https://www.youtube.com/@kprompt-ai) · [Instagram](https://www.instagram.com/kprompt.ai) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
