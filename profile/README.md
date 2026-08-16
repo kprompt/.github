@@ -10,7 +10,7 @@
 
 ### The AI Runtime for Kubernetes
 
-Open-source reasoning layer for Kubernetes: observe the cluster, plan safe actions, and execute only after approval. Laptop CLI + optional in-cluster Observe agent. **Free forever**, bring-your-own-key.
+Open-source reasoning layer for Kubernetes: observe, reason, and plan — nothing applies until you approve. Laptop CLI + optional in-cluster Observe agent. **Free forever**, bring-your-own-key.
 
 [![Release](https://img.shields.io/github/v/release/kprompt/kprompt?style=for-the-badge&color=2563eb&logo=github)](https://github.com/kprompt/kprompt/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/kprompt/kprompt/total?style=for-the-badge&logo=github)](https://github.com/kprompt/kprompt/releases)
