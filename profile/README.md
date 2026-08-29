@@ -89,7 +89,7 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 ---
 
-## What's in v0.11
+## What's in v0.12
 
 | | Capability |
 |---|------------|
@@ -99,8 +99,9 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 | Observe agent | Namespace watch → Incident → gated Slack / Discord / webhook |
 | Closed Learn loop | Apply + verify outcomes feed the incident patterns store — in-cluster |
 | Autopilot | **Propose-only** by default (never silent apply) |
-| CI & GitOps | `--output json` PlanResult for jq gates; `--gitops` opens a PR |
-| Multi-context | Read fan-out + per-context mutate approval |
+| CI & GitOps | `--output json` PlanResult; `--gitops` PR including **patch** / audit harden |
+| Multi-context | Read fan-out (incl. graph / Istio / GitOps) + per-context mutate approval |
+| Providers | Ollama `$0`, LM Studio, Fireworks, Qwen, Hetzner (beta), Azure, OpenAI-compat, … |
 
 ---
 
@@ -117,7 +118,7 @@ Same kubeconfig as `kubectl`. BYOK — your LLM keys stay local. Never silent au
 
 <div align="center">
 
-[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.11.0](https://github.com/kprompt/kprompt/releases/tag/v0.11.0)
+[Website](https://kprompt.ai) · [CLI](https://github.com/kprompt/kprompt) · [Discussions](https://github.com/kprompt/kprompt/discussions) · [Good first issues](https://github.com/kprompt/kprompt/labels/good%20first%20issue) · [v0.12.0](https://github.com/kprompt/kprompt/releases/tag/v0.12.0)
 
 [X @kpromptai](https://x.com/kpromptai) · [LinkedIn](https://www.linkedin.com/company/kprompt) · [YouTube](https://www.youtube.com/@kprompt-ai) · [Instagram](https://www.instagram.com/kprompt.ai) · [Bluesky](https://bsky.app/profile/kprompt.bsky.social) · [hello@kprompt.ai](mailto:hello@kprompt.ai)
 
