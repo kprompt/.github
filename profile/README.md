@@ -20,7 +20,7 @@ Open-source reasoning layer for Kubernetes: observe, reason, and plan — nothin
 
 <br />
 
-**Start here → [`github.com/kprompt/kprompt`](https://github.com/kprompt/kprompt)** · star · clone · try the demo
+**Start here → [`kprompt.ai`](https://kprompt.ai)** · [docs](https://kprompt.ai/docs) · [repo](https://github.com/kprompt/kprompt) · star · try the demo
 
 ```bash
 curl -fsSL https://kprompt.ai/install | bash
